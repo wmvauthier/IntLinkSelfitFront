@@ -1,0 +1,43 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div class="container">
+  <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container"> 
+                <div class="input-group stylish-input-group">
+                    <input [(ngModel)]="ticketInput" type="text" class="form-control"  placeholder="Insira aqui o código do Ticket">
+                    <span class="input-group-addon">
+                        <button (click)="getTicket()">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>  
+                    </span>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="imaginary_container"> 
+                <div class="input-group stylish-input-group">
+                    <input [(ngModel)]="cpfInput" type="text" class="form-control"  placeholder="Insira aqui o CPF do Aluno">
+                    <span class="input-group-addon"></span>
+                </div>
+            </div>
+        </div>
+  </div>
+</div>
+
+<br/>
+
+<div *ngIf="ticketObject" style="text-align: center;">
+    <button (click)="getCPF()" class="btn btn-rounded">Validar Ticket</button>
+</div>
+
+<h2 style="text-align: center;">{{message}}</h2>
+<br/>
+<h2 style="text-align: center;">{{object}}</h2>
